@@ -10,44 +10,28 @@
 #                                                                              #
 # **************************************************************************** #
 
- NAME = $(BIN_DIR)/libft.a
- OBJ_DIR = ../obj
- BIN_DIR = ../bin
- INC_DIR = ../inc
- SRC_DIR = .
- OBJS	 = $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/ \
-		   $(OBJ_DIR)/
+NAME = libft.a
+OBJ_DIR = obj
+SRC_DIR = .
+OBJS     = $(OBJ_DIR)/ft_strlen.o \
+           $(OBJ_DIR)/ft_strncmp.o
 
- CC = gcc
- CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR)
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
 
- $(NAME) : $(OBJS)
-	mkdir -p $(BIN_DIR)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
- 
- $(OBJ_DIR)/%.o : $(SRC_DIR)/%.c
-	mkdir -p $(OBJ_DIR)
-	$(CC) -c -MD $(CFLAGS) $< -o $@
+$(OBJ_DIR)/%.o : %.c
+        mkdir -p $(OBJ_DIR)
+        $(CC) -c -MD $(CFLAGS) $< -o $@
 
- -include $(OBJ_DIR)/*.d
+$(NAME) : $(OBJS)
+        $(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
- all : $(NAME)
+all : $(NAME)
 
- .PHONY: clean
- clean :
-	@rm -r $(OBJ_DIR)
- 
- .PHONY: fclean
- fclean : clean
-	@rm -r $(NAME)
+clean :
+        @rm -r $(OBJ_DIR)
 
- .PHONY: re
- re : fclean all
+fclean : clean
+        @rm -r $(NAME)
+
+re : fclean all
