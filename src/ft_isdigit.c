@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+int	ft_isdigit(int c)
 {
-	int	n;
-
-	n = 0;
-	while (str[n] != '\0')
-	{
-		if (str[n] < '0' || str[n] > '9')
-		{
-			return (0);
-		}
-		n++;
-	}
+	if (c < '0' || c > '9')
+		return (0);
 	return (1);
 }

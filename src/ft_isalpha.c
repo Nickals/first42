@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_str_is_alpha(char *str)
+int	ft_isalpha(int c)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] < 'A') || (str[i] > 'Z' && str[i] < 'a') || (str[i] > 'z'))
-			return (0);
-		i++;
-	}
+	if ((c < 'A') || (c > 'Z' && c < 'a') || (c > 'z'))
+		return (0);
 	return (1);
 }
