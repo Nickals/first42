@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmoncada <nmoncada@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/21 20:26:49 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/06/22 12:11:44 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/09 19:10:52 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/09 19:24:28 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_tolower(int c)
 {
-	if (c < '0' || c > '9')
-		return (0);
-	return (1);
+	while (c >= 65 && c <= 90)
+		c = c + 32;
+	return (c);
 }

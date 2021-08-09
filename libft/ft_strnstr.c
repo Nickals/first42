@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmoncada <nmoncada@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/29 17:15:02 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/06/29 17:15:05 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/09 19:29:01 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/09 19:47:28 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
-{
-	unsigned int	n;
-	unsigned int	c;
+#include "libft.h"
 
-	n = 0;
-	c = 0;
-	while (dest[n] != '\0')
-		n++;
-	while (src[c] != '\0' && c < nb)
-	{
-		dest[n] = src[c];
-		c++;
-		n++;
-	}
-	dest[n] = '\0';
-	return (n + c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+
 }

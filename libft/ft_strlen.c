@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmoncada <nmoncada@student.42urduliz.      +#+  +:+       +#+        */
+/*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:09:39 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/07/22 18:09:42 by nmoncada         ###   ########.fr       */
+/*   Updated: 2021/08/09 18:57:16 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	n;
+	size_t	n;
 
 	n = 0;
 	while (s[n] != '\0')
