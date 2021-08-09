@@ -26,5 +26,5 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		n++;
 	}
 	dest[n] = '\0';
-	return (dest);
+	return (n + c);
 }
