@@ -10,15 +10,20 @@
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
-int ft_isalnum(int c);
-int ft_isascii(int c);
-int ft_isprint(int c);
-int ft_toupper(int c);
-int ft_tolower(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+int	ft_toupper(int c);
+int	ft_tolower(int c);
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+
 size_t	ft_strlen(const char *s);
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t ft_strlcpy(char * dest, const char * src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcpy(char * dest, const char * src, size_t size);
 
 #endif
