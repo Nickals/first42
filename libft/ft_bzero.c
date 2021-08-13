@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 15:42:13 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/08/12 17:46:26 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/12 18:06:40 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/12 19:13:06 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*a;
 	char	*m;
-	size_t	n;
 
-	a = (char *)src;
-	m = (char *)dst;
-	n = 0;
-	if (!dst && !src)
-		return (NULL);
-	if (m > a)
-		while (len-- > 0)
-			m[len] = a[len];
-	else
-	{
-		while (n < len)
-		{
-			m[n] = a[n];
-			n++;
-		}
-	}
-	return (dst);
+	m = (char *)s;
+	while (n-- > 0)
+		m[n] = '\0';
 }

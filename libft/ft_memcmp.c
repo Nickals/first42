@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 15:42:13 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/08/12 17:46:26 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/13 17:39:20 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/13 18:19:25 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	char	*a;
-	char	*m;
-	size_t	n;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			a;
 
-	a = (char *)src;
-	m = (char *)dst;
-	n = 0;
-	if (!dst && !src)
-		return (NULL);
-	if (m > a)
-		while (len-- > 0)
-			m[len] = a[len];
-	else
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	a = 0;
+	while (a < n)
 	{
-		while (n < len)
-		{
-			m[n] = a[n];
-			n++;
-		}
+		if (str1[a] == str2[a])
+			a ++;
+		else
+			return (str1[a] - str2[a]);
 	}
-	return (dst);
+	return (0);
 }

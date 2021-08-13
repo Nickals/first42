@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/12 15:42:13 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/08/12 17:46:26 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/13 16:04:51 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/13 17:28:47 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*a;
-	char	*m;
-	size_t	n;
+	unsigned char	*str;
+	unsigned char	q;
+	size_t			a;
 
-	a = (char *)src;
-	m = (char *)dst;
-	n = 0;
-	if (!dst && !src)
-		return (NULL);
-	if (m > a)
-		while (len-- > 0)
-			m[len] = a[len];
-	else
+	str = (unsigned char *)s;
+	q = (unsigned char)c;
+	a = 0;
+	while (a < n)
 	{
-		while (n < len)
-		{
-			m[n] = a[n];
-			n++;
-		}
+		if (*str == q)
+			return (str);
+		str++;
+		a++;
 	}
-	return (dst);
+	return (NULL);
 }

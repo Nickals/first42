@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nmoncada <nmoncada@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/09 19:08:47 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/08/09 19:24:23 by nmoncada         ###   ########.fr       */
+/*   Created: 2021/08/12 18:54:55 by nmoncada          #+#    #+#             */
+/*   Updated: 2021/08/12 18:55:21 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
