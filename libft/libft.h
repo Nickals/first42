@@ -6,7 +6,7 @@
 /*   By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 18:36:27 by nmoncada          #+#    #+#             */
-/*   Updated: 2021/08/17 21:10:11 by nmoncada         ###   ########.fr       */
+/*   Updated: 2021/08/17 21:54:42 by nmoncada         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	**ft_split(char const *s, char c);
 
