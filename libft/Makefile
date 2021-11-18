@@ -6,7 +6,7 @@
 #    By: nmoncada <nmoncada@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/12 18:56:30 by nmoncada          #+#    #+#              #
-#    Updated: 2021/11/17 17:50:13 by nmoncada         ###   ########.fr        #
+#    Updated: 2021/11/18 21:02:17 by nmoncada         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c\
 OBJS	= $(SRCS:.c=.o)
 
 BONUS_S	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
-		ft_lstdelone.c
+		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUS_O	= $(BONUS_S:.c=.o)
 
 all:		$(NAME)
